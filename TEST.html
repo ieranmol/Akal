@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKAL Engineering Group Ltd.</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333333;
+            background-color: #f4f4f9;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #17a2b8;
+        }
+
+        /* Header and Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #001f3f;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-left h1 {
+            font-size: 1.5em;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 1em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #17a2b8;
+            color: #ffffff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('iStock-1499814881.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            max-width: 800px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* About Section */
+        #about {
+            padding: 100px 20px;
+            background: #ffffff;
+            color: #333333;
+        }
+
+        #about .content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: auto;
+            gap: 30px;
+        }
+
+        .about-image {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text {
+            flex: 2;
+            text-align: left;
+        }
+
+        .about-text h2 {
+            font-size: 2.5em;
+            color: #001f3f;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Services Section */
+        #services {
+            padding: 100px 0;
+            background: #f4f4f9;
+        }
+
+        .service-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            gap: 20px;
+            color: #333333;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .service-section:nth-child(even) {
+            background: #ffffff;
+        }
+
+        .service-image {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .service-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-content {
+            flex: 2;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .service-content h4 {
+            font-size: 2em;
+            color: #001f3f;
+            margin-bottom: 20px;
+        }
+
+        .service-content p {
+            font-size: 1.3em;
+            line-height: 1.8;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 80px 20px;
+            background: #001f3f;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-details {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .contact-details a {
+            color: #17a2b8;
+        }
+
+        footer {
+            background: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-left { margin-bottom: 15px; }
+
+            .hero h1 { font-size: 2.5em; }
+            .hero p { font-size: 1.2em; }
+
+            #about .content { flex-direction: column; }
+
+            .service-section { flex-direction: column; }
+            .service-content { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <h1>AKAL Engineering</h1>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Delivering Engineering Excellence Across North America</h1>
+        <p>Innovative Solutions for Regulated Industries</p>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="content">
+            <div class="about-image">
+                <img src="iStock-1385376693.jpg" alt="About AKAL Engineering">
+            </div>
+            <div class="about-text">
+                <h2>About AKAL Engineering</h2>
+                <p>
+                    AKAL Engineering specializes in delivering innovative, tailored solutions for regulated industries. 
+                    With expertise in pharmaceuticals, medical devices, nutraceuticals, and food sectors, our goal is to ensure your success through efficient and compliant engineering.
+                </p>
+                <p>
+                    Our services include process optimization, compliance validation, equipment selection, Lean manufacturing, and automation to help businesses achieve operational excellence and sustainability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="service-section">
+            <div class="service-image">
+                <img src="iStock-1598859151.jpg" alt="Automation">
+            </div>
+            <div class="service-content">
+                <h4>Automation</h4>
+                <p>
+                    Advanced automation solutions tailored to optimize processes, enhance precision, and scale operations. Harness Industry 4.0 with our state-of-the-art technologies.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-section">
+            <div class="service-image">
+                <img src="iStock-1499814881.jpg" alt="Equipment Selection & Installation">
+            </div>
+            <div class="service-content">
+                <h4>Equipment Selection & Installation</h4>
+                <p>
+                    Comprehensive guidance and seamless installation of GMP-compliant equipment, ensuring operational readiness and efficiency.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-section">
+            <div class="service-image">
+                <img src="iStock-1519619296.jpg" alt="Compliance & Validation">
+            </div>
+            <div class="service-content">
+                <h4>Compliance & Validation</h4>
+                <p>
+                    Ensure regulatory compliance through meticulous validation protocols, risk assessments, and process optimization services.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-section">
+            <div class="service-image">
+                <img src="iStock-1492822051.jpg" alt="Lean Manufacturing">
+            </div>
+            <div class="service-content">
+                <h4>Lean Manufacturing</h4>
+                <p>
+                    Implement Lean and Six Sigma practices to reduce waste, enhance productivity, and achieve sustainable cost savings.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-section">
+            <div class="service-image">
+                <img src="iStock-1385376693.jpg" alt="Serialization">
+            </div>
+            <div class="service-content">
+                <h4>Serialization</h4>
+                <p>
+                    Secure your supply chain with serialization solutions that ensure product authenticity and regulatory compliance.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-section">
+            <div class="service-image">
+                <img src="iStock-1469733208.jpg" alt="Labeling">
+            </div>
+            <div class="service-content">
+                <h4>Labeling</h4>
+                <p>
+                    Streamline labeling processes with automated systems designed to enhance product traceability and compliance.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-section">
+            <div class="service-image">
+                <img src="iStock-1492822051.jpg" alt="Bottling">
+            </div>
+            <div class="service-content">
+                <h4>Bottling</h4>
+                <p>
+                    Custom bottling solutions for liquids, powders, and capsules that prioritize precision and operational efficiency.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-section">
+            <div class="service-image">
+                <img src="iStock-1598859151.jpg" alt="Vials and Pouches">
+            </div>
+            <div class="service-content">
+                <h4>Vials & Pouches</h4>
+                <p>
+                    Advanced filling and sealing solutions for vials and pouches. We ensure product safety, sterility, and durability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <div class="contact-details">
+                <p><strong>Phone:</strong> +1 519-504-2721</p>
+                <p><strong>Email:</strong> <a href="mailto:ngre@akaleg.com">ngre@akaleg.com</a></p>
+                <p><strong>Location:</strong> London, Ontario, Canada</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AKAL Engineering. All rights reserved.</p>
+    </footer>
+</body>
+</html>
