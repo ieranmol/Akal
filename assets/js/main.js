@@ -89,8 +89,9 @@
     counters.forEach(animateCount);
   }
 
-  /* ---- Active nav link by current page ---- */
-  var path = window.location.pathname.split("/").pop() || "index.html";
+  /* ---- Active nav link by current page (folder-based clean URLs) ---- */
+  var segments = window.location.pathname.split("/").filter(Boolean);
+  var path = segments.length ? segments[segments.length - 1] : "home";
   document.querySelectorAll(".primary-nav a[data-page]").forEach(function (a) {
     if (a.getAttribute("data-page") === path) a.classList.add("active");
   });
