@@ -1,0 +1,373 @@
+/* AKAL Engineering — 3D build sequence styles
+   Extends assets/css/styles.css. Uses the existing tokens (--navy, --teal,
+   --nav-h, --max, --ease). Every selector is namespaced .akl3d-* except the
+   .subnav block at the end, which fixes an existing unstyled component. */
+
+/* ---------- Scroll container ---------- */
+.akl3d-scroller {
+  position: relative;
+}
+
+.akl3d-sticky {
+  position: sticky;
+  top: var(--nav-h);
+  height: calc(100vh - var(--nav-h));
+  overflow: hidden;
+}
+
+.akl3d-canvas {
+  position: absolute;
+  inset: 0;
+}
+.akl3d-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Legibility wash so copy stays readable over the render */
+.akl3d-sticky::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to right,
+    var(--navy) 0%,
+    rgba(0, 31, 63, 0.88) 26%,
+    rgba(0, 31, 63, 0) 54%);
+}
+@media (max-width: 900px) {
+  .akl3d-sticky::after {
+    background: linear-gradient(to bottom,
+      rgba(0, 31, 63, 0.25) 0%,
+      rgba(0, 31, 63, 0.92) 46%,
+      var(--navy) 74%);
+  }
+}
+
+/* ---------- Instrument readout ---------- */
+.akl3d-hud {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  z-index: 3;
+  pointer-events: none;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.48);
+  text-transform: uppercase;
+}
+.akl3d-hud b {
+  font-weight: 500;
+  color: var(--teal-light);
+}
+.akl3d-hud b.qualified {
+  color: #7ef2c0;
+}
+.akl3d-hud hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  margin: 7px 0;
+}
+@media (max-width: 720px) {
+  .akl3d-hud { font-size: 0.58rem; top: 12px; right: 14px; line-height: 1.9; }
+}
+
+/* ---------- Steps overlay ---------- */
+.akl3d-steps {
+  position: relative;
+}
+
+.akl3d-step {
+  min-height: calc(100vh - var(--nav-h));
+  display: flex;
+  align-items: center;
+}
+.akl3d-step > .wrap {
+  width: 100%;
+}
+.akl3d-copy {
+  max-width: 480px;
+}
+
+.akl3d-step h2 {
+  color: #fff;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin: 14px 0 16px;
+}
+.akl3d-step p {
+  color: rgba(255, 255, 255, 0.74);
+  margin: 0 0 20px;
+}
+
+.akl3d-index {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.42);
+}
+.akl3d-index b {
+  color: var(--teal-light);
+  font-weight: 500;
+}
+
+.akl3d-specs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 0 22px;
+  padding: 0;
+}
+.akl3d-specs li {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(95, 208, 224, 0.32);
+  border-radius: 3px;
+  padding: 5px 9px;
+  background: rgba(23, 162, 184, 0.09);
+}
+
+/* ---------- Stage rail ---------- */
+.akl3d-rail {
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.akl3d-rail span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.22);
+  transition: background 0.35s var(--ease), width 0.35s var(--ease);
+}
+.akl3d-rail span.done { background: rgba(95, 208, 224, 0.45); }
+.akl3d-rail span.on   { background: var(--teal-light); width: 34px; }
+@media (max-width: 1100px) { .akl3d-rail { display: none; } }
+
+/* ---------- No-WebGL / no-JS fallback ---------- */
+.akl3d-canvas[data-akal-3d="unavailable"] { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .akl3d-rail span { transition: none; }
+}
+
+/* =========================================================
+   FIX — .subnav was used in /services/ but had no CSS rules.
+   The capability index and its scroll-spy state rendered
+   unstyled. These are the missing declarations.
+   ========================================================= */
+.subnav {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: saturate(160%) blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.subnav .wrap {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.subnav .wrap::-webkit-scrollbar { display: none; }
+.subnav a {
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: color 0.25s var(--ease), background 0.25s var(--ease);
+}
+.subnav a:hover,
+.subnav a:focus-visible {
+  color: var(--navy);
+  background: var(--tint);
+}
+.subnav a.active {
+  color: var(--teal-dim);
+  background: var(--tint);
+  box-shadow: inset 0 -2px 0 var(--teal);
+}
+
+/* =========================================================
+   CONTINUOUS BLUEPRINT SHELL
+   .blueprint::before anchors its teal glow at 50% 0% — the top of
+   each element — so two stacked .blueprint sections produced a
+   visible band at the seam, and background-position:center made the
+   grids fall out of alignment. One shell carries the background for
+   both; the children are transparent.
+   NOTE: no overflow on the shell — it is an ancestor of the sticky
+   canvas, and a scroll container would break position:sticky again.
+   ========================================================= */
+.akl3d-shell {
+  position: relative;
+}
+.akl3d-intro {
+  position: relative;
+  z-index: 2;
+  overflow: clip;
+}
+.akl3d-scroller {
+  background: none;
+}
+.akl3d-scroller::before { content: none; }
+
+/* ---------- Scroll cue ---------- */
+.akl3d-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 40px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  transition: opacity 0.5s var(--ease), color 0.25s var(--ease);
+}
+.akl3d-cue:hover { color: #fff; }
+.akl3d-cue.gone { opacity: 0; pointer-events: none; }
+.akl3d-cue i {
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 42px;
+  background: rgba(95, 208, 224, 0.25);
+  overflow: hidden;
+}
+.akl3d-cue i::after {
+  content: "";
+  position: absolute;
+  left: 0; top: -42px;
+  width: 1px; height: 42px;
+  background: linear-gradient(to bottom, transparent, var(--teal-light));
+  animation: akl3d-drop 1.9s var(--ease) infinite;
+}
+@keyframes akl3d-drop {
+  0%   { transform: translateY(0); }
+  70%  { transform: translateY(84px); }
+  100% { transform: translateY(84px); }
+}
+
+/* ---------- Build progress bar ---------- */
+.akl3d-progress {
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%; height: 2px;
+  background: rgba(255, 255, 255, 0.10);
+  z-index: 4;
+}
+.akl3d-progress i {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, var(--teal), var(--teal-light));
+  transition: width 0.12s linear;
+}
+
+/* ---------- Rail becomes clickable ---------- */
+.akl3d-rail a {
+  display: block;
+  width: 20px; height: 2px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.22);
+  transition: background 0.35s var(--ease), width 0.35s var(--ease);
+}
+.akl3d-rail a:hover,
+.akl3d-rail a:focus-visible { background: #fff; width: 30px; }
+.akl3d-rail a.done { background: rgba(95, 208, 224, 0.45); }
+.akl3d-rail a.on   { background: var(--teal-light); width: 34px; }
+.akl3d-rail { pointer-events: auto; }
+
+/* Stage caption under the model, mirrors the rail */
+.akl3d-caption {
+  position: absolute;
+  left: 22px; bottom: 26px;
+  z-index: 3;
+  pointer-events: none;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+.akl3d-caption b { color: var(--teal-light); font-weight: 500; }
+@media (max-width: 1100px) { .akl3d-caption { left: 16px; bottom: 18px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .akl3d-cue i::after { animation: none; }
+  .akl3d-progress i { transition: none; }
+}
+
+/* =========================================================
+   FULL-PAGE SCENE
+   The sticky canvas is now the first child of the shell and the
+   whole content column is pulled up over it, so the model stays
+   behind the intro, all twenty stages, the CTA and the footer.
+   .akl3d-flow must never take an overflow value: it is an ancestor
+   of the sticky element and a scroll container would break it.
+   ========================================================= */
+.akl3d-flow {
+  position: relative;
+  z-index: 2;
+  margin-top: calc(-100vh + var(--nav-h));
+}
+
+/* CTA sits on the live scene, so it needs on-dark treatment */
+.akl3d-cta {
+  padding: 96px 0 104px;
+}
+.akl3d-cta .bracket-card {
+  background: rgba(4, 26, 48, 0.72);
+  backdrop-filter: saturate(150%) blur(6px);
+  border-color: rgba(95, 208, 224, 0.28);
+  text-align: center;
+}
+.akl3d-cta .bracket-card h2 { color: #fff; }
+.akl3d-cta .bracket-card .muted { color: rgba(255, 255, 255, 0.74); }
+.akl3d-cta .spec-tag {
+  color: var(--teal-light);
+  border-color: rgba(95, 208, 224, 0.32);
+  background: rgba(23, 162, 184, 0.10);
+}
+
+/* Footer overlays the scene rather than hiding it */
+.akl3d-shell .site-footer {
+  background: rgba(2, 20, 38, 0.86);
+  backdrop-filter: saturate(140%) blur(4px);
+  border-top: 1px solid rgba(95, 208, 224, 0.18);
+}
+
+/* Readout furniture is distracting over the closing sections */
+.akl3d-hud,
+.akl3d-caption,
+.akl3d-rail { transition: opacity 0.6s var(--ease); }
+.akl3d-sticky.at-rest .akl3d-hud,
+.akl3d-sticky.at-rest .akl3d-caption,
+.akl3d-sticky.at-rest .akl3d-rail { opacity: 0; pointer-events: none; }

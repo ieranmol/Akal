@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build Facility | AKAL Engineering Group Ltd.</title>
+<meta name="description" content="From first requirements to qualified handover: the twenty stages of delivering a GMP facility, and the AKAL Engineering service line accountable at each one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/akal-3d.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="/" class="brand">
+      <span class="mark">AE</span>
+      <span>AKAL ENGINEERING<small>Regulated Engineering Partner</small></span>
+    </a>
+    <nav class="primary-nav">
+      <a href="/about/" data-page="about">About</a>
+      <a href="/services/" data-page="services">Services</a>
+      <a href="/process/" data-page="process">Build Facility</a>
+      <a href="/industries/" data-page="industries">Industries</a>
+      <a href="/contact/" data-page="contact">Contact</a>
+      <a href="/get-in-touch/" class="btn btn-primary nav-cta">Get in Touch</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- INTRO + BUILD SEQUENCE share one blueprint background -->
+<div class="blueprint akl3d-shell">
+
+  <div class="akl3d-sticky">
+    <div class="akl3d-canvas" id="akl3d-canvas" aria-hidden="true"></div>
+    <div class="akl3d-rail" aria-label="Build stages">
+      <a href="#stage-1" title="Stage 01" aria-label="Go to stage 1"></a>
+      <a href="#stage-2" title="Stage 02" aria-label="Go to stage 2"></a>
+      <a href="#stage-3" title="Stage 03" aria-label="Go to stage 3"></a>
+      <a href="#stage-4" title="Stage 04" aria-label="Go to stage 4"></a>
+      <a href="#stage-5" title="Stage 05" aria-label="Go to stage 5"></a>
+      <a href="#stage-6" title="Stage 06" aria-label="Go to stage 6"></a>
+      <a href="#stage-7" title="Stage 07" aria-label="Go to stage 7"></a>
+      <a href="#stage-8" title="Stage 08" aria-label="Go to stage 8"></a>
+      <a href="#stage-9" title="Stage 09" aria-label="Go to stage 9"></a>
+      <a href="#stage-10" title="Stage 10" aria-label="Go to stage 10"></a>
+      <a href="#stage-11" title="Stage 11" aria-label="Go to stage 11"></a>
+      <a href="#stage-12" title="Stage 12" aria-label="Go to stage 12"></a>
+      <a href="#stage-13" title="Stage 13" aria-label="Go to stage 13"></a>
+      <a href="#stage-14" title="Stage 14" aria-label="Go to stage 14"></a>
+      <a href="#stage-15" title="Stage 15" aria-label="Go to stage 15"></a>
+      <a href="#stage-16" title="Stage 16" aria-label="Go to stage 16"></a>
+      <a href="#stage-17" title="Stage 17" aria-label="Go to stage 17"></a>
+      <a href="#stage-18" title="Stage 18" aria-label="Go to stage 18"></a>
+      <a href="#stage-19" title="Stage 19" aria-label="Go to stage 19"></a>
+      <a href="#stage-20" title="Stage 20" aria-label="Go to stage 20"></a>
+    </div>
+    <div class="akl3d-hud" aria-hidden="true">
+      <div>Stage <b id="akl-stage">01 / 20</b></div>
+      <div>Phase <b id="akl-phase">Layout</b></div>
+      <hr>
+      <div>ISO Class <b id="akl-iso">n/a</b></div>
+      <div>&Delta;P <b id="akl-dp">n/a</b></div>
+      <div>ACPH <b id="akl-ac">n/a</b></div>
+      <hr>
+      <div>Status <b id="akl-st">In Design</b></div>
+    </div>
+    <div class="akl3d-caption" aria-hidden="true"><b id="akl-cap-no">01</b> &middot; <span id="akl-cap-t">User requirements &amp; feasibility</span></div>
+    <div class="akl3d-progress" aria-hidden="true"><i id="akl-bar"></i></div>
+  </div>
+
+  <div class="akl3d-flow">
+
+<section class="akl3d-intro" style="padding-top: calc(var(--nav-h) + 70px); padding-bottom: 70px;">
+  <span class="crosshair" style="top:26%; left:12%; animation-delay:0s;"><i></i></span>
+  <span class="crosshair" style="top:68%; left:85%; animation-delay:1.4s;"><i></i></span>
+  <div class="wrap" style="position:relative; z-index:2;">
+    <div class="reveal in-view" style="max-width:760px;">
+      <span class="spec-tag on-dark">Delivery Model &middot; Concept to Qualified Production</span>
+      <h1 style="color:#fff; font-size:clamp(2.1rem, 4.6vw, 3.4rem); margin-top:20px; margin-bottom:20px;">
+        How a GMP facility gets built.
+      </h1>
+      <p style="color:rgba(255,255,255,0.76); font-size:1.06rem; max-width:60ch;">
+        A regulated plant is built once and audited for the rest of its life. Below is the
+        sequence we work through with our clients: twenty stages from first requirements
+        to a qualified, released facility, and the service line accountable at each one.
+      </p>
+      <button class="akl3d-cue" type="button" id="akl-cue">
+        <i></i><span>Scroll to build the facility</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- 3D BUILD SEQUENCE -->
+
+  <div class="akl3d-steps" id="akl3d-steps">
+
+    <article class="akl3d-step" id="stage-1"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>01</b> / 20 &middot; Definition</p>
+      <h2>User requirements & feasibility</h2>
+      <p>Before geometry there is intent. We capture what the facility must make, at what scale, to which market's regulations, and test whether the business case survives contact with GMP reality. The URS written here is the document every later qualification protocol traces back to.</p>
+      <ul class="akl3d-specs"><li>URS development</li><li>Capacity &amp; batch modelling</li><li>Regulatory market scope</li><li>CapEx feasibility</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#facility-engineering">Facility Engineering &amp; Expansions</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-2"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>02</b> / 20 &middot; Definition</p>
+      <h2>Site selection & due diligence</h2>
+      <p>A site is chosen on constraints, not on price alone. Utility headroom, effluent capacity, floor-to-underside height, floor loading, road access for module delivery, and room to expand later all get assessed before commitment. A cheap site that cannot take a 4 m ceiling void is not cheap.</p>
+      <ul class="akl3d-specs"><li>Site &amp; space evaluation</li><li>Utility headroom survey</li><li>Zoning &amp; permitting review</li><li>Expansion allowance</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#facility-engineering">Facility Engineering &amp; Expansions</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-3"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>03</b> / 20 &middot; Definition</p>
+      <h2>Conceptual design & regulatory strategy</h2>
+      <p>Room adjacencies fix personnel and material flow, and flow is what an inspector reads first. We set the classified envelope, the airlock positions, and the pressure cascade, then agree the regulatory strategy that the whole design will be defended against.</p>
+      <ul class="akl3d-specs"><li>Process flow</li><li>Personnel / material segregation</li><li>Cascade strategy</li><li>Regulatory pathway</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#facility-engineering">Facility Engineering &amp; Expansions</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-4"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>04</b> / 20 &middot; Design</p>
+      <h2>Detailed design & design qualification</h2>
+      <p>Concept becomes a buildable, defensible package: dimensioned layouts, HVAC zoning, utility schematics, and equipment schedules. Design qualification documents that the design meets the URS. Done properly here, it removes most of the findings that would otherwise surface during OQ.</p>
+      <ul class="akl3d-specs"><li>Dimensioned GA drawings</li><li>HVAC zoning &amp; load design</li><li>Utility schematics</li><li>DQ protocol</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#cqv">Commissioning, Qualification &amp; Validation</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-5"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>05</b> / 20 &middot; Design</p>
+      <h2>Procurement & long-lead equipment</h2>
+      <p>Cleanroom panels, AHUs, and filling equipment carry lead times measured in months, so procurement starts while design details are still closing. Vendor bids are evaluated technically rather than commercially, and footprints are reserved on the drawing before an order is placed.</p>
+      <ul class="akl3d-specs"><li>URS-based bid evaluation</li><li>Vendor selection</li><li>Long-lead ordering</li><li>Footprint reservation</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#equipment-engineering">Equipment Engineering &amp; Selection</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-6"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>06</b> / 20 &middot; Construction</p>
+      <h2>Civil works & building shell</h2>
+      <p>Foundations, structural frame, roof, and envelope. The shell has to deliver the clear internal height the ceiling void needs and the floor loading the equipment demands. Both are effectively unfixable afterwards, which is why they are verified against the design before the frame closes.</p>
+      <ul class="akl3d-specs"><li>Foundations &amp; slab</li><li>Structural frame</li><li>Envelope &amp; roof</li><li>Clear-height verification</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#project-management">Project Management</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-7"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>07</b> / 20 &middot; Construction</p>
+      <h2>Floor finishes</h2>
+      <p>The slab is finished with seamless epoxy or welded vinyl, coved up the wall so there is no square internal corner anywhere a particle can sit. Falls to drain, load ratings, and equipment plinths are set now. Retrofitting them means breaking a qualified room open.</p>
+      <ul class="akl3d-specs"><li>Seamless epoxy / vinyl</li><li>Coved skirting</li><li>Equipment plinths</li><li>Flatness survey</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#project-management">Project Management</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-8"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>08</b> / 20 &middot; Construction</p>
+      <h2>Walls</h2>
+      <p>Modular GMP panel systems go up on the layout grid: flush-finished, non-shedding, with coved junctions at floor and ceiling. Panel joints are sealed and every service penetration is detailed before it is cut, because each one is a future leak on the room integrity test.</p>
+      <ul class="akl3d-specs"><li>Modular GMP panels</li><li>Flush finish</li><li>Coved junctions</li><li>Sealed penetrations</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#facility-engineering">Facility Engineering &amp; Expansions</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-9"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>09</b> / 20 &middot; Construction</p>
+      <h2>Windows & doors</h2>
+      <p>Double-glazed vision panels sit flush with the panel face on both sides, with no ledge, no reveal, and nothing to clean around. Sightlines let supervisors see a process without gowning into it, and door interlocks are wired so an airlock cannot be opened at both ends at once.</p>
+      <ul class="akl3d-specs"><li>Flush double glazing</li><li>Supervision sightlines</li><li>Interlocked airlocks</li><li>Door hardware schedule</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#facility-engineering">Facility Engineering &amp; Expansions</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-10"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>10</b> / 20 &middot; Construction</p>
+      <h2>Cleanroom classification & airlocks</h2>
+      <p>Each room is assigned its ISO 14644 class and its place in the pressure cascade, typically 10 to 15 Pa between adjacent grades, stepping down from the cleanest space outward. Gowning and material airlocks become the only routes across a classification boundary.</p>
+      <ul class="akl3d-specs"><li>ISO 14644 classification</li><li>10&ndash;15 Pa cascade</li><li>PAL / MAL airlocks</li><li>Gowning sequence</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#qms">QMS &amp; GMP Compliance</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-11"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>11</b> / 20 &middot; Systems</p>
+      <h2>HVAC ducting</h2>
+      <p>Supply and return runs are routed above the corridor and branched to each room, sized for the air change rate that room's class demands. Ductwork is cleaned, capped, and pressure-tested to a declared leakage class before anything is closed in. That is the last moment at which a fault is cheap to find.</p>
+      <ul class="akl3d-specs"><li>Supply / return routing</li><li>Volume control dampers</li><li>Leakage-class testing</li><li>Pre-install cleaning</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#facility-engineering">Facility Engineering &amp; Expansions</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-12"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>12</b> / 20 &middot; Systems</p>
+      <h2>AHU installation</h2>
+      <p>The air handling unit is the room's lungs and its single largest running cost. Pre-filtration, cooling, reheat, and humidity control are staged in sequence, then tied to controls so temperature, humidity, and differential pressure are trended continuously rather than spot-checked.</p>
+      <ul class="akl3d-specs"><li>Multi-stage filtration</li><li>Temperature &amp; RH control</li><li>Fan &amp; coil selection</li><li>&Delta;P trending</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#automation">Automation &amp; Digital Transformation</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-13"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>13</b> / 20 &middot; Systems</p>
+      <h2>Process utilities</h2>
+      <p>Purified water, WFI, clean steam, compressed air, and process gases are distributed on sloped, drainable, dead-leg-free loops in sanitary stainless. Utility quality is a product quality attribute, so these systems carry their own qualification and ongoing monitoring programmes.</p>
+      <ul class="akl3d-specs"><li>PW / WFI loops</li><li>Clean steam</li><li>Compressed air &amp; gases</li><li>Dead-leg-free design</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#facility-engineering">Facility Engineering &amp; Expansions</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-14"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>14</b> / 20 &middot; Systems</p>
+      <h2>Electrical, BMS & EMS</h2>
+      <p>Power distribution, emergency lighting, and containment are installed alongside the building management and environmental monitoring systems. The EMS is what proves the room stayed in a state of control between qualifications, so its sensor placement is a GMP decision, not an electrical one.</p>
+      <ul class="akl3d-specs"><li>Power &amp; containment</li><li>BMS integration</li><li>EMS sensor placement</li><li>Alarm &amp; escalation logic</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#automation">Automation &amp; Digital Transformation</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-15"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>15</b> / 20 &middot; Systems</p>
+      <h2>Cleanroom ceiling & HEPA</h2>
+      <p>A walkable ceiling closes the envelope and gives maintenance access from above, so filter changes never require entry into a classified room. Terminal HEPA housings are set on the grid, gel-sealed, then tested in place. The ceiling is where the room's cleanliness is finally made real.</p>
+      <ul class="akl3d-specs"><li>Walkable ceiling grid</li><li>Terminal HEPA housings</li><li>Gel seal</li><li>In-situ filter integrity test</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#facility-engineering">Facility Engineering &amp; Expansions</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-16"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>16</b> / 20 &middot; Equipment</p>
+      <h2>Process equipment installation</h2>
+      <p>Dispensing, granulation, compression, and coating equipment is set, levelled, connected to utilities, and run through site acceptance testing. Installation is documented to the standard IQ will demand, because re-creating that evidence later is far more expensive than capturing it now.</p>
+      <ul class="akl3d-specs"><li>Setting &amp; levelling</li><li>Utility connection</li><li>SAT execution</li><li>Installation records</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#equipment-engineering">Equipment Engineering &amp; Selection</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-17"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>17</b> / 20 &middot; Equipment</p>
+      <h2>Packaging lines & serialization</h2>
+      <p>Filling, capping, labeling, and case packing arrive as separate machines and have to leave as one line. We integrate vision inspection and serialization for track-and-trace, then tune changeover so the line speed on the quotation is the line speed on the floor.</p>
+      <ul class="akl3d-specs"><li>Line integration</li><li>Serialization &amp; aggregation</li><li>Vision inspection</li><li>Changeover optimization</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#serialization">Serialization</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-18"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>18</b> / 20 &middot; Qualification</p>
+      <h2>Commissioning</h2>
+      <p>Systems are started, balanced, and proven to work before any qualification protocol is executed. Air balancing, cascade verification, control loop tuning, and punch-list closure happen here. Commissioning finds the engineering faults so that qualification can be about evidence rather than troubleshooting.</p>
+      <ul class="akl3d-specs"><li>Air balancing</li><li>Cascade verification</li><li>Loop tuning</li><li>Punch-list closure</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#cqv">Commissioning, Qualification &amp; Validation</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-19"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>19</b> / 20 &middot; Qualification</p>
+      <h2>Qualification & validation</h2>
+      <p>Installation, operational, and performance qualification are executed against pre-approved protocols. Cleanroom classification is certified at rest and in operation, computer systems are validated for data integrity, and cleaning and process validation demonstrate the plant makes product reproducibly.</p>
+      <ul class="akl3d-specs"><li>IQ / OQ / PQ</li><li>ISO 14644 certification</li><li>CSV &amp; data integrity</li><li>Cleaning &amp; process validation</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#cqv">Commissioning, Qualification &amp; Validation</a>
+    </div></div></article>
+
+    <article class="akl3d-step" id="stage-20"><div class="wrap"><div class="akl3d-copy">
+      <p class="akl3d-index">Stage <b>20</b> / 20 &middot; Qualification</p>
+      <h2>Handover & inspection readiness</h2>
+      <p>Nothing is handed over until it is proven. The turnover package (drawings, protocols, deviations, SOPs, training records, maintenance schedules) is closed out and the quality system is live, so the facility can be inspected on day one rather than month six.</p>
+      <ul class="akl3d-specs"><li>Turnover package</li><li>SOP &amp; training</li><li>Preventive maintenance</li><li>Audit readiness</li></ul>
+      <a class="btn btn-outline btn-arrow" href="/services/#qms">QMS &amp; GMP Compliance</a>
+    </div></div></article>
+  </div>
+
+<!-- CTA -->
+<section class="akl3d-cta">
+  <div class="wrap">
+    <div class="bracket-card reveal" style="text-align:center;">
+      <span class="spec-tag">Ready when you are</span>
+      <h2 style="margin:18px 0 14px;">Ready to scope your next project?</h2>
+      <p class="muted" style="max-width:56ch; margin:0 auto 26px;">
+        Tell us what you're building, expanding, or trying to get audit-ready.
+        We'll respond with next steps, not a sales script.
+      </p>
+      <a href="/get-in-touch/" class="btn btn-primary btn-arrow">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand" style="margin-bottom:14px;">
+          <span class="mark">AE</span>
+          <span style="color:#fff;">AKAL ENGINEERING<small>Regulated Engineering Partner</small></span>
+        </div>
+        <p>Engineering, compliance, and automation partner for regulated manufacturers across North America.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/process/">Build Facility</a></li>
+          <li><a href="/industries/">Industries</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+          <li><a href="/get-in-touch/">Get in Touch</a></li>
+          <li><a href="/faq/">FAQs</a></li>
+          <li><a href="/policy/">Quality &amp; HSE Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/#cqv">CQV</a></li>
+          <li><a href="/services/#qms">QMS &amp; Compliance</a></li>
+          <li><a href="/services/#automation">Automation</a></li>
+          <li><a href="/services/#facility-engineering">Facility Engineering</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15195042721">+1 519-504-2721</a></li>
+          <li><a href="mailto:info@akaleg.com">info@akaleg.com</a></li>
+          <li><span style="color:rgba(255,255,255,0.7);">London, Ontario, Canada</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024&ndash;2026 AKAL Engineering Group Ltd. All rights reserved.</span>
+      <span>Facility &middot; Equipment &middot; CQV &middot; Automation &middot; Packaging</span>
+    </div>
+  </div>
+</footer>
+
+  </div><!-- /.akl3d-flow -->
+
+</div><!-- /.akl3d-shell -->
+
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/akal-3d.js"></script>
+<script>
+(function () {
+  var scroller = document.getElementById("akl3d-steps");
+  var canvas = document.getElementById("akl3d-canvas");
+  if (!scroller || !canvas || !window.AkalScene) return;
+
+  var PHASE = ["Definition", "Definition", "Definition", "Design", "Design", "Construction", "Construction", "Construction", "Construction", "Construction", "Systems", "Systems", "Systems", "Systems", "Systems", "Equipment", "Equipment", "Qualification", "Qualification", "Qualification"];
+  var ISO = ["n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "ISO 8", "ISO 8", "ISO 8", "ISO 8", "ISO 8", "ISO 7 / 8", "ISO 7 / 8", "ISO 7 / 8", "ISO 7 / 8", "ISO 7 / 8", "ISO 7 / 8"];
+  var DP = ["n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "0 Pa", "0 Pa", "12 Pa", "12 Pa", "12 Pa", "15 Pa", "15 Pa", "15 Pa", "15 Pa", "15 Pa", "15 Pa"];
+  var AC = ["n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "20 / h", "20 / h", "20 / h", "45 / h", "45 / h", "45 / h", "60 / h", "60 / h", "60 / h"];
+  var ST = ["In Definition", "In Definition", "In Definition", "In Design", "In Design", "In Construction", "In Construction", "In Construction", "In Construction", "In Construction", "Systems Install", "Systems Install", "Systems Install", "Systems Install", "Systems Install", "Equipment Install", "Equipment Install", "Commissioning", "Qualification", "Qualified, Released"];
+
+  var el = {
+    stage: document.getElementById("akl-stage"), phase: document.getElementById("akl-phase"),
+    iso: document.getElementById("akl-iso"), dp: document.getElementById("akl-dp"),
+    ac: document.getElementById("akl-ac"), st: document.getElementById("akl-st")
+  };
+  var rail = [].slice.call(document.querySelectorAll(".akl3d-rail a"));
+
+  var TITLES = [].slice.call(document.querySelectorAll(".akl3d-step h2"))
+                 .map(function (h) { return h.textContent.trim(); });
+  var capNo = document.getElementById("akl-cap-no");
+  var capT  = document.getElementById("akl-cap-t");
+  var bar   = document.getElementById("akl-bar");
+  var cue   = document.getElementById("akl-cue");
+
+  if (cue) {
+    cue.addEventListener("click", function () {
+      var first = document.getElementById("stage-1");
+      if (first) first.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    window.addEventListener("scroll", function () {
+      cue.classList.toggle("gone", window.scrollY > 120);
+    }, { passive: true });
+  }
+
+  window.AkalScene.mount({
+    scroller: scroller,
+    canvas: canvas,
+    mode: "full",
+    onProgress: function (p) {
+      if (bar) bar.style.width = (p * 100).toFixed(1) + "%";
+      var sticky = document.querySelector(".akl3d-sticky");
+      if (sticky) sticky.classList.toggle("at-rest", p > 0.995);
+    },
+    onStage: function (i) {
+      if (capNo) capNo.textContent = ("0" + (i + 1)).slice(-2);
+      if (capT && TITLES[i]) capT.textContent = TITLES[i];
+      el.stage.textContent = ("0" + (i + 1)).slice(-2) + " / 20";
+      el.phase.textContent = PHASE[i];
+      el.iso.textContent = ISO[i];
+      el.dp.textContent = DP[i];
+      el.ac.textContent = AC[i];
+      el.st.textContent = ST[i];
+      var done = i === 19;
+      [el.iso, el.dp, el.ac, el.st].forEach(function (n) { n.classList.toggle("qualified", done); });
+      rail.forEach(function (s, k) {
+        s.classList.toggle("on", k === i);
+        s.classList.toggle("done", k < i);
+      });
+    }
+  });
+})();
+</script>
+</body>
+</html>

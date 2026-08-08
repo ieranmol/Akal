@@ -1,0 +1,113 @@
+/* AKAL Engineering — project inquiry form
+   Extends assets/css/styles.css and uses its tokens only.
+   Every selector is namespaced .akf-* so nothing leaks site-wide. */
+
+.akf {
+  padding: 4px 34px 34px;
+}
+.akf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 18px;
+}
+.akf-field { display: flex; flex-direction: column; gap: 7px; }
+.akf-field.akf-wide { grid-column: 1 / -1; }
+@media (max-width: 620px) {
+  .akf-grid { grid-template-columns: 1fr; }
+  .akf { padding: 4px 22px 26px; }
+}
+
+.akf label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.akf label .akf-req { color: var(--teal); }
+
+.akf input,
+.akf select,
+.akf textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.akf textarea { min-height: 132px; resize: vertical; }
+.akf select { appearance: none; cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+                    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position: calc(100% - 19px) 50%, calc(100% - 14px) 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 38px;
+}
+.akf input:focus,
+.akf select:focus,
+.akf textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.14);
+}
+.akf input[aria-invalid="true"],
+.akf textarea[aria-invalid="true"],
+.akf select[aria-invalid="true"] { border-color: #c0392b; }
+
+.akf-error {
+  font-size: 0.78rem;
+  color: #c0392b;
+  min-height: 0;
+}
+
+/* Honeypot: hidden from people, visible to naive bots */
+.akf-hp {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+}
+
+.akf-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+.akf-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
+}
+.akf button[type="submit"][disabled] { opacity: 0.55; cursor: progress; }
+
+/* Result banners */
+.akf-result {
+  display: none;
+  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+.akf-result.show { display: block; }
+.akf-result.ok {
+  background: rgba(23, 162, 184, 0.09);
+  border: 1px solid rgba(23, 162, 184, 0.34);
+  color: var(--navy);
+}
+.akf-result.bad {
+  background: rgba(192, 57, 43, 0.07);
+  border: 1px solid rgba(192, 57, 43, 0.32);
+  color: #8e2b20;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .akf input, .akf select, .akf textarea { transition: none; }
+}
