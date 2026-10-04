@@ -73,6 +73,10 @@
     requestAnimationFrame(step);
   }
   if (counters.length && "IntersectionObserver" in window) {
+    /* HTML holds the real values for crawlers and no-JS visitors; reset to 0 only when we will animate */
+    if (!reduceMotion) {
+      counters.forEach(function (el) { el.textContent = "0" + (el.getAttribute("data-suffix") || ""); });
+    }
     var cio = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
