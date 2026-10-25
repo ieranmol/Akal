@@ -86,6 +86,9 @@
       okBox.classList.add("show");
       okBox.scrollIntoView({ behavior: "smooth", block: "center" });
       if (viaFallback) console.info("AKAL form: delivered via no-CORS fallback.");
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "generate_lead", { form_id: "get_in_touch", method: viaFallback ? "fallback" : "direct" });
+      }
     }
     function fail(err) {
       console.error("AKAL form:", err);
