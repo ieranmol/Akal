@@ -1,0 +1,21 @@
+# AKAL Engineering Group Ltd.
+
+> GMP engineering and validation consultants based in London, Ontario, Canada, serving pharmaceutical, nutraceutical (natural health product) and food & beverage GMP manufacturers in Ontario, across Canada and North America. Services include IQ/OQ/PQ protocol development and execution, equipment and transfer qualification, commissioning, qualification and validation (CQV), computer system validation (CSV), facility engineering, QMS and GMP compliance, automation, serialization, labeling, bottling and packaging line engineering.
+
+AKAL does not serve biotechnology, cell and gene therapy, or medical device companies.
+
+Contact: info@akaleg.com | +1 519-504-2721 | https://akaleg.com/get-in-touch/
+
+## Services and industries
+- [Services](https://akaleg.com/services/): Eleven service lines across the GMP manufacturing lifecycle
+- [Pharmaceutical GMP consulting](https://akaleg.com/pharmaceutical-gmp-consulting/): IQ/OQ/PQ, transfer qualification, CSV, packaging lines, Health Canada inspection readiness
+- [Nutraceutical GMP consulting](https://akaleg.com/nutraceutical-gmp-consulting/): Natural health product site licence readiness, equipment qualification, cleaning validation
+- [Food & beverage GMP engineering](https://akaleg.com/food-beverage-gmp-consulting/): Bottling and fill lines, packaging, equipment qualification, sanitary design
+- [Industries](https://akaleg.com/industries/): Sectors served
+- [Build Facility](https://akaleg.com/process/): The stages of delivering a GMP facility
+
+## Company
+- [About](https://akaleg.com/about/)
+- [FAQs](https://akaleg.com/faq/)
+- [Quality & HSE Policy](https://akaleg.com/policy/)
+- [Contact](https://akaleg.com/contact/)
