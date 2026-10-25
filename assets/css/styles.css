@@ -11,7 +11,7 @@
   --navy-soft: #032a52;
   --teal: #17a2b8;
   --teal-light: #5fd0e0;
-  --teal-dim: #128293;
+  --teal-dim: #0e6f7e;
   --bg: #f4f4f9;
   --surface: #ffffff;
   --ink: #1c2b3a;
@@ -600,3 +600,17 @@ footer.site-footer {
 
 .footer-credit a { color: rgba(255, 255, 255, 0.7); text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s ease; }
 .footer-credit a:hover { color: var(--teal-light, #5FD0E0); }
+
+/* Compliance update: contrast, footer headings, cookie banner */
+.footer-grid h3 { color:#fff; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin:0 0 18px; font-weight:600; line-height:1.3; }
+.footer-bottom { color: rgba(255, 255, 255, 0.65); }
+.contact-info-card .text-teal, .contact-info-card [style*="color:var(--teal)"] { color: var(--teal-dim) !important; }
+.contact-info-card h2.text-teal { margin: 0 0 14px; font-weight: 600; line-height: 1.3; }
+.akal-consent { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 1000; max-width: 720px; margin: 0 auto; background: var(--navy); color: #fff; border: 1px solid rgba(95, 208, 224, 0.4); border-radius: 6px; padding: 18px 20px; box-shadow: 0 12px 32px rgba(0, 21, 43, 0.35); display: flex; gap: 16px 20px; align-items: center; flex-wrap: wrap; font-size: .92rem; line-height: 1.5; }
+.akal-consent-text { margin: 0; flex: 1 1 320px; color: rgba(255, 255, 255, 0.88); }
+.akal-consent-text a { color: var(--teal-light); text-decoration: underline; }
+.akal-consent-actions { display: flex; gap: 10px; flex: 0 0 auto; }
+.akal-consent-btn { font: 600 .9rem var(--font-body, Inter, sans-serif); padding: 10px 20px; border-radius: 4px; cursor: pointer; border: 1px solid #fff; background: #fff; color: var(--navy); min-width: 104px; }
+.akal-consent-btn:hover, .akal-consent-btn:focus-visible { background: var(--teal-light); border-color: var(--teal-light); color: var(--navy); outline: none; }
+
+.akf-note a { color: var(--teal-dim); text-decoration: underline; text-underline-offset: 2px; }
