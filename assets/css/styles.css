@@ -597,3 +597,6 @@ footer.site-footer {
 .text-teal { color: var(--teal); }
 .mono { font-family: var(--font-mono); }
 .muted { color: var(--muted); }
+
+.footer-credit a { color: rgba(255, 255, 255, 0.7); text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s ease; }
+.footer-credit a:hover { color: var(--teal-light, #5FD0E0); }
